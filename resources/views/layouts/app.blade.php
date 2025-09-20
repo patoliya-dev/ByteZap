@@ -29,6 +29,12 @@
                            Add User
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('attendance.data') ? 'active' : '' }}"
+                           href="{{ route('attendance.data') }}">
+                           Attendances
+                        </a>
+                    </li>
                 </ul>
 
                 <form action="{{ route('logout') }}" method="POST">
@@ -56,5 +62,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/attendance-export.js') }}"></script>
 </body>
 </html>
