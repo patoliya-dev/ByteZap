@@ -23,3 +23,10 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/attendance/export/{filter}', [AttendanceExportController::class, 'exportAttendance'])->name('attendance.export');
+// Route::get('/', [AttendanceController::class, 'index']);
+
+
+Route::get('/manual', [AttendanceController::class, 'showManualForm'])->name('manual');
+Route::post('/mark-attendance', [AttendanceController::class, 'markAttendance']);
+Route::get('/webcam', [AttendanceController::class, 'showWebcamForm']);
+Route::post('/webcam-attendance', [AttendanceController::class, 'markFromWebcam']);

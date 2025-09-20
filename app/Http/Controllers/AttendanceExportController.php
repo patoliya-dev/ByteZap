@@ -18,5 +18,9 @@ class AttendanceExportController extends Controller
         $filename = "{$base}_{$stamp}.csv";
 
         return Excel::download(new AttendanceExport($filter), $filename);
+    //     return Excel::download(new AttendanceExport($filter), $filename, \Excel::CSV, [
+    //     'Content-Type' => 'application/octet-stream',
+    //     'Content-Disposition' => "attachment; filename=\"{$filename}\"",
+    // ]);
     }
 }

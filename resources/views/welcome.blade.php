@@ -13,7 +13,7 @@
                     <img src="{{ asset('/user.png') }}" alt="User Login"
                          class="img-fluid mb-3" style="max-height:150px;">
                     <h5 class="mb-3">User Login</h5>
-                    <a href="{{ route('register.form') }}" class="btn btn-primary w-100">Login as User</a>
+                    <a href="{{ route('manual') }}" class="btn btn-primary w-100">User Attendence</a>
                 </div>
             </div>
         </div>
