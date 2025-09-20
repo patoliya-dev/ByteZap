@@ -14,21 +14,30 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
             <a class="navbar-brand" href="#">Attendance System</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
+                @auth
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('attendance-dashboard') ? 'active' : '' }}" 
+                        <a class="nav-link {{ request()->is('attendance-dashboard') ? 'active' : '' }}"
                            href="{{ route('register.form') }}">
                            Add User
                         </a>
                     </li>
                 </ul>
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </button>
+                </form>
+                @endauth
             </div>
         </div>
     </nav>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
 
 class UserRegisterController extends Controller
 {
@@ -13,7 +14,7 @@ class UserRegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
             'name'          => 'required|string|max:255',

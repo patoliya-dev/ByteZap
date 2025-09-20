@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Users List</h1>
+    <h1>Users</h1>
     <table id="users-table" class="display">
         <thead>
             <tr>

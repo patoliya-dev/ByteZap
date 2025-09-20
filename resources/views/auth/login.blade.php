@@ -35,18 +35,10 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                        <label class="form-check-label" for="remember">Remember Me</label>
-                    </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
-
-                {{-- <div class="mt-3 text-center">
-                    <a href="{{ route('password.request') }}">Forgot Your Password?</a>
-                </div> --}}
             </div>
         </div>
     </div>
